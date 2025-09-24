@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Funerária Paz Eterna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cadastro -->
+  <div id="cadastro" class="container hidden">
+    <h2>Cadastro de Funcionário</h2>
+    <label>Nome</label>
+    <input type="text" id="nome">
+    <label>Telefone</label>
+    <input type="text" id="telefone">
+    <label>Email</label>
+    <input type="email" id="emailCadastro">
+    <label>Senha</label>
+    <input type="password" id="senhaCadastro">
+    <label>Rua</label>
+    <input type="text" id="rua">
+    <label>Nº</label>
+    <input type="text" id="numero">
+    <label>Complemento</label>
+    <input type="text" id="complemento">
+    <label>CEP</label>
+    <input type="text" id="cep">
+    <button onclick="criarConta()">Cadastrar</button>
+  </div>
+
+  <!-- Login -->
+  <div id="login" class="container hidden">
+    <h2>Login</h2>
+    <label>Email</label>
+    <input type="email" id="emailLogin">
+    <label>Senha</label>
+    <input type="password" id="senhaLogin">
+    <button onclick="fazerLogin()">Entrar</button>
+    <button onclick="mostrarCadastro()" style="margin-top:10px;">Criar Conta</button>
+  </div>
+
+  <!-- Site -->
+  <div id="siteFuneraria" class="hidden">
+    <nav>
+      <h1>⚱️ Funerária Paz Eterna</h1>
+      <div class="menu">
+        <button onclick="mostrarServicos()">Serviços</button>
+        <button onclick="mostrarPerfil()">Perfil</button>
+        <button onclick="mostrarPerfilAdm()">Admin</button>
+        <button onclick="logout()">Sair</button>
+      </div>
+    </nav>
+
+       <!-- Introdução -->
+    <div id="introducao" style="padding:30px; text-align:center;">
+      <h2>Bem-vindo à Funerária Paz Eterna</h2>
+      <p style="max-width:700px; margin:auto; font-size:16px; line-height:1.6;">
+        A <strong>Funerária Paz Eterna</strong> está ao seu lado em momentos delicados,
+        oferecendo apoio, respeito e serviços de qualidade.  
+        Dispomos de planos funerários, urnas, coroas de flores e assistência completa
+        para garantir serenidade à sua família.
+      </p>
+      <p style="max-width:700px; margin:20px auto 0; font-size:16px; line-height:1.6;">
+        Nosso compromisso é prestar homenagem digna e acolhedora, com cuidado em cada detalhe,
+        desde o atendimento até a cerimônia de despedida.
+      </p>
+    </div>
+
+    <!-- Serviços -->
+    <div id="servicos" class="grid"></div>
+
+    <!-- Perfil -->
+    <div id="perfil" class="perfil hidden">
+      <h2>Alterar Perfil</h2>
+      <label>Nome</label><input type="text" id="pNome">
+      <label>Telefone</label><input type="text" id="pTelefone">
+      <label>Email</label><input type="email" id="pEmail">
+      <label>Rua</label><input type="text" id="pRua">
+      <label>Nº</label><input type="text" id="pNumero">
+      <label>Complemento</label><input type="text" id="pComplemento">
+      <label>CEP</label><input type="text" id="pCep">
+      <button onclick="salvarPerfil()">Salvar Alterações</button>
+    </div>
+
+    <!-- Admin -->
+    <div id="perfilAdm" class="perfil hidden">
+      <h2>Área do Administrador</h2>
+      <div style="margin-bottom:15px;">
+        <button onclick="adicionarCard()">➕ Adicionar Serviço</button>
+      </div>
+      <div id="adminServicos" class="grid"></div>
+      <button onclick="salvarServicos()">Salvar Alterações</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

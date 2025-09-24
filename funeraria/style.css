@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; padding: 20px; background:#f4f4f4; color:#333;}
+.hidden { display: none; }
+nav { background:#2c2c2c; color:#fff; padding:15px; display:flex; justify-content:space-between; align-items:center;}
+nav h1 { font-size:22px;}
+.menu button { background:#fff; color:#2c2c2c; border:none; padding:8px 16px; margin-left:5px; border-radius:5px; cursor:pointer;}
+#servicos { display: flex; flex-wrap: wrap; gap: 20px; padding:20px;}
+.produto { border: 1px solid #ccc; padding: 10px; width: 220px; cursor: pointer; border-radius:8px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.produto img { width: 100%; height: auto; border-radius:6px;}
+.descricao { display: none; font-size:14px; margin-top:5px;}
+.card { border: 1px solid #aaa; padding: 10px; margin-bottom: 10px; background:#fff;}
